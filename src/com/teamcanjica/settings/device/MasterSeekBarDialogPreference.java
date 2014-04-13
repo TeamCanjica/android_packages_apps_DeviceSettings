@@ -151,7 +151,7 @@ public class MasterSeekBarDialogPreference extends
 			    i++;
 			}
 			for (int j = 0; j <= defaultVoltValues.length-1; j++) {
-			    Utils.writeValue(FILE_CPU_VOLTAGE + String.valueOf(j), "varm=0x" + String.valueOf(Integer.toHexString(defaultVoltValues[j] - i)));
+			    Utils.writeValue(FILE_CPU_VOLTAGE + String.valueOf(j), "varm=0x" + Integer.toHexString(defaultVoltValues[j] - i));
 			}
 		} else if (key.equals(DeviceSettings.KEY_DISCHARGING_THRESHOLD)) {
 			Utils.writeValue(FILE_CYCLE_CHARGING, "dischar=" + String.valueOf((Integer) newValue));
@@ -168,7 +168,7 @@ public class MasterSeekBarDialogPreference extends
 				.getDefaultSharedPreferences(context);
 
 		Utils.writeValue(FILE_CYCLE_CHARGING, 
-				"dischar=" + String.valueOf(sharedPrefs.getString(String.valueOf(DeviceSettings.KEY_DISCHARGING_THRESHOLD), "100")));
+				"dischar=" + String.valueOf(sharedPrefs.getString(DeviceSettings.KEY_DISCHARGING_THRESHOLD, "100")));
 		Utils.writeValue(FILE_CYCLE_CHARGING,
 				"rechar=" + String.valueOf(sharedPrefs.getString(DeviceSettings.KEY_RECHARGING_THRESHOLD, "100")));
 
@@ -180,7 +180,7 @@ public class MasterSeekBarDialogPreference extends
 		    i++;
 		}
 		for (int j = 0; j <= defaultVoltValues.length-1; j++) {
-		    Utils.writeValue(FILE_CPU_VOLTAGE + String.valueOf(j), "varm=0x" + String.valueOf(Integer.toHexString(defaultVoltValues[j] - i)));
+		    Utils.writeValue(FILE_CPU_VOLTAGE + String.valueOf(j), "varm=0x" + Integer.toHexString(defaultVoltValues[j] - i));
 		}
 	}
 }
