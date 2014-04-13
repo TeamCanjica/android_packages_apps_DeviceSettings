@@ -168,7 +168,7 @@ public class MasterSeekBarDialogPreference extends
 				.getDefaultSharedPreferences(context);
 
 		Utils.writeValue(FILE_CYCLE_CHARGING, 
-				"dischar=" + String.valueOf(sharedPrefs.getString(DeviceSettings.KEY_DISCHARGING_THRESHOLD), "100")));
+				"dischar=" + String.valueOf(sharedPrefs.getString(DeviceSettings.KEY_DISCHARGING_THRESHOLD, "100")));
 		Utils.writeValue(FILE_CYCLE_CHARGING,
 				"rechar=" + String.valueOf(sharedPrefs.getString(DeviceSettings.KEY_RECHARGING_THRESHOLD, "100")));
 
