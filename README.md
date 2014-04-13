@@ -1,4 +1,4 @@
-DeviceSettings for TeamCanjica
+DeviceSettings for Novathor u8500 devices
 ====================================
 ToDO:
 =======
