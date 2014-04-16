@@ -127,7 +127,7 @@ public class DeviceSettings extends Activity implements OnItemClickListener{
 		// Change theme
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		Utils.changeTheme(this, sharedPrefs.getString(
+		Utils.setTheme(this, sharedPrefs.getString(
                 DeviceSettings.KEY_SWITCH_THEME, "Default"));
 		
 		super.onCreate(savedInstanceState);

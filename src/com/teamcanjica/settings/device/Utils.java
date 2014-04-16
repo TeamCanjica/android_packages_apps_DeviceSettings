@@ -226,7 +226,7 @@ public class Utils {
      * The theme to change to
      * @param theme
      */
-	public static void changeTheme(Activity activity, String theme) {
+	public static void setTheme(Activity activity, String theme) {
 		if (theme.equals("Default")) {
 			activity.setTheme(R.style.BaseAppTheme);
 		} else if (theme.equals("Holo Light")) {

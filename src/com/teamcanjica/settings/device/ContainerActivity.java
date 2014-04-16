@@ -46,7 +46,7 @@ public class ContainerActivity extends Activity {
 		// Change theme
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		Utils.changeTheme(this, sharedPrefs.getString(
+		Utils.setTheme(this, sharedPrefs.getString(
 				DeviceSettings.KEY_SWITCH_THEME, "Default"));
 		
 		setContentView(R.layout.container);
