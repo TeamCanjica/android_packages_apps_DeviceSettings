@@ -105,9 +105,9 @@
         
         <!-- LPA Mode Control -->
         <com.teamcanjica.settings.device.MasterSeekBarDialogPreference
-           android:defaultValue="16"
+           android:defaultValue="22"
            android:dialogMessage="@string/lpa_mode_control_dialog_message"
-           android:max="35"
+           android:max="53"
            teamcanjica:min="0"
            android:key="lpa_mode_control"
            android:title="@string/lpa_mode_control_title_head"

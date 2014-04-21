@@ -121,7 +121,7 @@ OnPreferenceChangeListener {
 				DeviceSettings.KEY_MALI_L2MR, "48"));
 		
 		Utils.writeValue(FILE_MALI_PREALLOC_MEM, sharedPrefs.getString(
-				DeviceSettings.KEY_MALI_PAM, "50331648"));
+				DeviceSettings.KEY_MALI_PAM, "16777216"));
 		
 		Utils.writeValue(FILE_SCHED_MC, sharedPrefs.getString(
 				DeviceSettings.KEY_SCHED_MC, "2"));
