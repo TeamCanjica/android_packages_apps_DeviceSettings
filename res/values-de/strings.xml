@@ -269,29 +269,29 @@
     <!-- Nebenkategorie: Speicher -->
     <string name="storage_subcat_title">Speicher</string>
     <string name="switch_storage_title_head">Tausche Speicher</string>
-    <string name="switch_storage_summary_head">Tauscht den internen Speicher mit dem externen (SD-Karte) Speicher aus.
-    <string name="disable_bln_summary_head">You won\'t be able to be notified of notifications through your backlight if BLN is disabled.</string>
+    <string name="switch_storage_summary_head">Tauscht den internen Speicher mit dem externen (SD-Karte) Speicher aus. (Neustart benötigt!)
+    <string name="disable_bln_summary_head">Möglicherweise könnten keine Nachrichten durch die Hintergrundbeleuchtung ankommen, falls BLN deaktiviert ist.</string>
 
-    <!-- Nebenkategorie: Torch-->
-    <string name="torch_subcat_title">Torch</string>
-    <string name="burning_led_title_head">Burning LED</string>
-    <string name="burning_led_summary_head">Burning LED mode for assistive light.\nWARNING: Turning this on for a long time will heat up your device, be careful!</string>
+    <!-- Nebenkategorie: Taschenlampe-->
+    <string name="torch_subcat_title">Taschenlampe</string>
+    <string name="burning_led_title_head">Leuchtende LED</string>
+    <string name="burning_led_summary_head">Der Leuchtende LED Modus als zusätzliche Lichtquelle.\nWARNUNG: Das aktivieren dieser Einstellung für längere Zeit wird dein Gerät stark erwärmen!</string>
 
-    <!-- Nebenkategorie: Voltages -->
-    <string name="voltages_subcat_title">Voltages</string>
-    <string name="cpu_voltage_title_head">CPU Voltages</string>
-    <string name="cpu_voltage_summary_head">Adjust the universal CPU voltages. <b>BEWARE! Too LOW voltages may cause reboots!</b></string>
-	<string name="cpu_voltage_dialog_message">Adjust the voltage change.</string>
-	<string name="enable_voltage_title_head">Voltage on more steps</string>
-	<string name="enable_voltage_summary_head">Enable setting voltage for step3 and step4 on janice and step3 on codina. BEWARE! These steps may be unstable.</string>
+    <!-- Nebenkategorie: Spannungen -->
+    <string name="voltages_subcat_title">Spannungen</string>
+    <string name="cpu_voltage_title_head">CPU Spannungen</string>
+    <string name="cpu_voltage_summary_head">Verändere die universellen CPU Spannungen. <b>VORSICHT! Zu geringe Spannungen könnten plötzliche Neustarts hervorrufen!</b></string>
+	<string name="cpu_voltage_dialog_message">Verändere die Spannungsänderung.</string>
+	<string name="enable_voltage_title_head">Spannungen auf mehrere Stufen.</string>
+	<string name="enable_voltage_summary_head">AKtiviere diese Spannungs-Einstellung für Schritt 3 und Schritt 4 auf janice und Schritt 3 auf codina. VORSICHT! Diese Schritte sind noch nicht sehr stabil!</string>
 
-    <!-- Nebenkategorie: Accelerometer -->
-    <string name="accelerometer_subcat_title">Accelerometer</string>
-    <string name="use_accelerometer_calibration_title_head">Use calibration data</string>
-    <string name="use_accelerometer_calibration_summary_head">Use the accelerometer calibration values. Do a calibration after checking this!</string>
-    <string name="calibrate_accelerometer_title_head">Calibrate</string>
-    <string name="calibrate_accelerometer_summary_head">Put your phone on a flat surface, and press this to calibrate</string>
-    <string name="accelerometer_dialog_head">Calibration done</string>
-    <string name="accelerometer_dialog_message">The sensor has been successfully calibrated.</string>
+    <!-- Nebenkategorie: Beschleunigungssensor -->
+    <string name="accelerometer_subcat_title">Beschleunigungssensor</string>
+    <string name="use_accelerometer_calibration_title_head">Benütze die Kalibrierungs-Daten</string>
+    <string name="use_accelerometer_calibration_summary_head">Benütze die Kalibrierungsdaten des Beschleunigungssensors. Kalibriere Dein Gerät nach Aktvierien dieser Einstellung!</string>
+    <string name="calibrate_accelerometer_title_head">Kalibrieren</string>
+    <string name="calibrate_accelerometer_summary_head">Lege dein Handy auf eine gerade Oberfläche und klick dann auf Kalibrieren.</string>
+    <string name="accelerometer_dialog_head">Kalibrierung abgeschlossen.</string>
+    <string name="accelerometer_dialog_message">Die Sensoren wurden komplett neu kalibriert.</string>
 
 </resources>
