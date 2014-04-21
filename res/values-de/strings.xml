@@ -197,85 +197,79 @@
     <!-- Nebenkategorie: FSync -->
     <string name="fsync_subcat_title">FSync</string>
     <string name="fsync_title_head">FSync Modus</string>
-    <string name="fsync_summary_head">Das Deaktivieren von fsync kann die IO Leistung verbessern, könnte aber Fehler bei Deinen Daten hervorrufen. Dynamisches fsync aktualisiert.</string>
+    <string name="fsync_summary_head">Das Deaktivieren von fsync kann die IO Leistung verbessern, könnte aber Fehler bei Deinen Daten hervorrufen. Dynamisches fsync aktualisiert die Speicher beim aktivieren des Displays.</string>
 
     <!-- Nebenkategorie: EMULATOR -->
     <string name="emulator_subcat_title">Emulator</string>
-    <string name="screenoff_title_head">Turn Screen Off</string>
-    <string name="screenoff_summary_head">Turn your screen off using an emulated button press.</string>
-    <string name="powermenu_title_head">Activate Power Menu</string>
-    <string name="powermenu_summary_head">Activate the power menu using an emulated button press.</string>
+    <string name="screenoff_title_head">Schalte den Bildschirm aus.</string>
+    <string name="screenoff_summary_head">Schaltet Deinen Bildschirm beim Drücken einer Emulator-Taste aus.</string>
+    <string name="powermenu_title_head">Aktiviere das Einschalt-Menü</string>
+    <string name="powermenu_summary_head">Aktiviert das Einschalt-Menü beim Drücken einer Emulator-Taste.</string>
 
     <!-- Nebenkategorie: GPU -->
     <string name="gpu_name">GPU</string>
 
     <!-- Nebenkategorie: Clock Speed -->
-    <string name="clock_speed_subcat_title">Clock Speed</string>
-    <string name="disable_autoboost_title_head">Disable AutoBoost GPU</string>
-    <string name="disable_autoboost_summary_head">Disabling autoboosting GPU governor will allow you to manually set static GPU clock speeds.</string>
-    <string name="set_gpu_clock_title_head">Clock Speed</string>
-    <string name="set_gpu_clock_summary_head">Set static GPU clock speed. Default:400MHz</string>
-    <string name="disable_fullspeed_title_head">Disable GPU fullspeed</string>
-    <string name="disable_fullspeed_summary_head">By default, GPU clock is working at fullspeed. Change it to halfspeed (399 kHz / 2 = 199 kHz, etc.)</string>
+    <string name="clock_speed_subcat_title">Taktfrequenz</string>
+    <string name="disable_autoboost_title_head">Deaktiviere den GPU-AutoBoost</string>
+    <string name="disable_autoboost_summary_head">Beim Deaktivieren des GPU-AutoBoost Governor wird das manuelle Festlegen der ruhenden GPU Taktfrequenz erlauben.</string>
+    <string name="set_gpu_clock_title_head">Taktgeschwindigkeit</string>
+    <string name="set_gpu_clock_summary_head">Gib einen Wert für die ruhende GPU Taktgeschwindigkeit ein. Standard:400MHz</string>
+    <string name="disable_fullspeed_title_head">Deaktiviere die volle Leistung der GPU.</string>
+    <string name="disable_fullspeed_summary_head">Standardmäßig ist die Leistung der GPU auf die Maximale Leistung geschalten. Ändere es zur halben Leistung (399 kHz / 2 = 199 kHz, etc.)</string>
 
     <!-- Nebenkategorie: Mali Boost -->
-    <string name="mali_boost_subcat_title">Mali Boost</string>
-    <string name="mali_boost_delay_title_head">Mali Boost Delay</string>
-    <string name="mali_boost_delay_summary_head">Adjust the delay at which GPU boosts frequency, in ms. Default:500</string>
-    <string name="boost_highthresh_summary_head">Adjust the threshold at which GPU clock increases.</string>
-    <string name="boost_highthresh_title_head">Mali High Threshold</string>
-    <string name="boost_lowthresh_title_head">Mali Low Threshold</string>
-    <string name="boost_lowthresh_summary_head">Adjust the threshold at which GPU clock decreases.</string>
-    <string name="set_high_clock_title_head">High Load Clock Speed</string>
-    <string name="set_high_clock_summary_head">Set high load GPU clock speed</string>
-    <string name="set_low_clock_title_head">Low Load Clock Speed</string>
-    <string name="set_low_clock_summary_head">Set low load GPU clock speed</string>
+    <string name="mali_boost_subcat_title">Mali Leistungssteigerung</string>
+    <string name="mali_boost_delay_title_head">Mali Leistungssteigerung-Verspätung</string>
+    <string name="mali_boost_delay_summary_head">Verändere die Verspätung, bei der die GPU frequentiell einen Leistungsschub bekommt, in ms. Standard:500</string>
+    <string name="boost_highthresh_summary_head">Verändere die Schwelle, bei der der GPU Takt erhöht wird.</string>
+    <string name="boost_highthresh_title_head">Mali Höchster-Schwellenwert</string>
+    <string name="boost_lowthresh_title_head">Mali Niedrigster Schwellenwert</string>
+    <string name="boost_lowthresh_summary_head">Verändere die Schwelle, bei der der GPU Takt erniedrigt wird.</string>
+    <string name="set_high_clock_title_head">Höchstlast: Taktgeschwindigkeit</string>
+    <string name="set_high_clock_summary_head">Ändere die höchste Taktgeschwindigkeit</string>
+    <string name="set_low_clock_title_head">Schwachlast: Taktgeschwindigkeit</string>
+    <string name="set_low_clock_summary_head">Ändere die niedrigste Taktgeschwindigkeit</string>
 
-    <!-- Nebenkategorie: GPU MISC -->
-    <string name="gpu_misc_subcat_title">Miscellaneous</string>
-    <string name="gpu_voltage_title_head">GPU Undervolting</string>
-    <string name="gpu_voltage_summary_head">BEWARE! HIGHLY RECOMMENDED TO DISABLE RESTORE ON REBOOT IN SETTINGS! These voltages also supply other engines like <b>Video, Image, Audio engine</b>, not only GPU! UNDERVOLT AT YOUR OWN RISK!</string>
-    <string name="gpu_voltage_dialog_message">Adjust your GPU voltage change.</string>
+    <!-- Nebenkategorie: GPU Sonstiges -->
+    <string name="gpu_misc_subcat_title">Sonstiges</string>
+    <string name="gpu_voltage_title_head">GPU Unterspannung</string>
+    <string name="gpu_voltage_summary_head">WARNUNG! ES IST HÖCHSTENS EMPFOHLEN FÜR DIESE EINSTELLUNG DAS WIEDERHERSTELLEN BEIM NEUSTART ZU DEAKTIVIEREN!!! Diese Spannungen beliefern auch Verbraucher wie z.b. <b>Videos, Bilder, Musik </b>, nicht nur die GPU! VERRINGERN DER SPANNUNGEN AUF EIGENES RISIKO!!!</string>
+    <string name="gpu_voltage_dialog_message">Ändere die Spannungsänderung der GPU.</string>
     <string name="mali_l2_mr_title_head">Mali L2 Max Reads</string>
-    <string name="mali_l2_mr_summary_head">Increasing it may improve graphics performance.</string>
-    <string name="mali_pam_title_head">Mali Pre-allocated memory size</string>
-    <string name="mali_pam_summary_head">Increasing it may improve graphics performance.</string>
+    <string name="mali_l2_mr_summary_head">Das Erhöhen verbessert möglicherweise die Grafik-Performance.</string>
+    <string name="mali_pam_title_head">Mali vorbelegter Speicherplatz</string>
+    <string name="mali_pam_summary_head">Das Erhöhen verbessert möglicherweise die Grafik-Performance.</string>
 
-    <!-- CATEGORY: I/O -->
+    <!-- Kategorie: I/O -->
     <string name="io_name">I/O</string>
 
     <!-- Nebenkategorie: MMC -->
     <string name="mmc_subcat_title">MMC</string>
-    <string name="use_spi_crc_title_head">Disable SPI CRC</string>
-    <string name="use_spi_crc_summary_head">Disabling SPI CRC can improve mmc performance (10% - 30%) but phone may freeze randomly</string>
+    <string name="use_spi_crc_title_head">Deaktiviere SPI CRC</string>
+    <string name="use_spi_crc_summary_head">Das Deaktivieren von SPI CRC verbessert möglicherweise die mmc Performance (10% - 30%), aber dein Handy kann zufällig Einfrieren.</string>
 
     <!-- Nebenkategorie: Scheduler -->
     <string name="scheduler_subcat_title">Scheduler</string>
-    <string name="sched_mc_title_head">Multicore Power Saving</string>
-    <string name="sched_mc_summary_head">Try to group tasks into the least cores possible to have hotplug-like powersavings.</string>
-    <string name="readaheadkb_dialog_message">Select the readahead buffer size. Default:512kB</string>
-    <string name="readaheadkb_title_head">Readahead buffer size</string>
-    <string name="readaheadkb_summary_head">Readahead kB will affect SD R/W performance.</string>
+    <string name="sched_mc_title_head">Mehrkern-Energiesparen</string>
+    <string name="sched_mc_summary_head">Versuche, die versch. Aufgaben so gering wie möglich in den Kernen zu halten, für hotplug-ähnliche Ergebnisse: Energie sparen.</string>
+    <string name="readaheadkb_dialog_message">Wähle die voraussichtliche Größe des Speicherplatzes. Standard:512kB</string>
+    <string name="readaheadkb_title_head">Voraussichtliche Größe des Speicherplatzes</string>
+    <string name="readaheadkb_summary_head">Voraussichtliche kB könnten die SD R/W Performance beeinflussen.</string>
 
-    <!-- Nebenkategorie: Boottime -->
-    <string name="boottime_subcat_title">Boot time</string>
-    <string name="boottime_summary_head">Check your total boot time.</string>
-    <string name="boottime_title_head">Boot Time Check</string>
-    <string name="boottime_dialog_message">Your boot time is: </string> 
+    <!-- Nebenkategorie: Boot-Zeit -->
+    <string name="boottime_subcat_title">Boot Zeit</string>
+    <string name="boottime_summary_head">Kontrolliere die benötigte Zeit zum Hochfahren.</string>
+    <string name="boottime_title_head">Boot-Zeit-Kontrolle</string>
+    <string name="boottime_dialog_message">Dein Handy benötigt zum hochfahren: </string> 
 
-    <!-- CATEGORY: ADVANCED -->
-    <string name="advanced_name">Advanced</string>
+    <!-- Kategorie: Fortgeschritten -->
+    <string name="advanced_name">Fortgeschritten</string>
 
-    <!-- Nebenkategorie: STORAGE -->
-    <string name="storage_subcat_title">Storage</string>
-    <string name="switch_storage_title_head">Swap Storages</string>
-    <string name="switch_storage_summary_head">Switches internal storage partition with external sd-card. Reboot required.</string>
-    <string name="reboot_dialog_head">Reboot Required</string>
-    <string name="reboot_dialog_message">A reboot is required for the setting to take effect, reboot now?</string>
-
-    <!-- Nebenkategorie: Backlight-->
-    <string name="backlight_subcat_title">Backlight</string>
-    <string name="disable_bln_title_head">Disable BLN</string>
+    <!-- Nebenkategorie: Speicher -->
+    <string name="storage_subcat_title">Speicher</string>
+    <string name="switch_storage_title_head">Tausche Speicher</string>
+    <string name="switch_storage_summary_head">Tauscht den internen Speicher mit dem externen (SD-Karte) Speicher aus.
     <string name="disable_bln_summary_head">You won\'t be able to be notified of notifications through your backlight if BLN is disabled.</string>
 
     <!-- Nebenkategorie: Torch-->
