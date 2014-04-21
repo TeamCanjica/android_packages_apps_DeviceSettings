@@ -103,6 +103,10 @@ public class DeviceSettings extends Activity implements OnItemClickListener{
 	public static final String KEY_GPU_VOLTAGE = "gpu_voltage";
 	public static final String KEY_MALI_L2MR = "mali_l2_mr";
 	public static final String KEY_MALI_PAM = "mali_pam";
+	public static final String KEY_BOOST_HIGHTHRESH = "boost_highthresh";
+	public static final String KEY_BOOST_LOWTHRESH = "boost_lowthresh";
+	public static final String KEY_SET_HIGH_CLOCK = "set_high_clock";
+	public static final String KEY_SET_LOW_CLOCK = "set_low_clock";
 
 	// I/O
 	public static final String KEY_USE_SPI_CRC = "use_spi_crc";

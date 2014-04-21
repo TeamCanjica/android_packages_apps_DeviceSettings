@@ -39,6 +39,8 @@ OnPreferenceChangeListener {
 	private static final String FILE_SCHED_MC = "/sys/devices/system/cpu/sched_mc_power_savings";
 	private static final String FILE_PANEL_GAMMA = "/sys/class/lcd/panel/device/gamma_mode";
 	private static final String FILE_TOUCHSCREEN_SENSITIVITY = "/sys/kernel/mxt224e/threshold_t48";
+	private static final String FILE_BOOST_HIGH = "/sys/kernel/mali/mali_boost_high";
+	private static final String FILE_BOOST_LOW = "/sys/kernel/mali/mali_boost_low";
 
 	private Context mCtx;
 
@@ -87,6 +89,10 @@ OnPreferenceChangeListener {
 			mCtx.startActivity(new Intent(getContext().getPackageManager()
 	                .getLaunchIntentForPackage(getContext().getPackageName()))
 	                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+		} else if (key.equals(DeviceSettings.KEY_SET_HIGH_CLOCK)) {
+			Utils.writeValue(FILE_BOOST_HIGH, (String) newValue);
+		} else if (key.equals(DeviceSettings.KEY_SET_LOW_CLOCK)) {
+			Utils.writeValue(FILE_BOOST_LOW, (String) newValue);
 		}
 
 		return true;
@@ -115,7 +121,7 @@ OnPreferenceChangeListener {
 				DeviceSettings.KEY_MALI_L2MR, "48"));
 		
 		Utils.writeValue(FILE_MALI_PREALLOC_MEM, sharedPrefs.getString(
-				DeviceSettings.KEY_MALI_PAM, "50331648"));
+				DeviceSettings.KEY_MALI_PAM, "16777216"));
 		
 		Utils.writeValue(FILE_SCHED_MC, sharedPrefs.getString(
 				DeviceSettings.KEY_SCHED_MC, "2"));
@@ -125,6 +131,12 @@ OnPreferenceChangeListener {
 
 		Utils.writeValue(FILE_TOUCHSCREEN_SENSITIVITY, sharedPrefs.getString(
 				DeviceSettings.KEY_TOUCHSCREEN_SENSITIVITY, "val=17"));
+
+		Utils.writeValue(FILE_BOOST_HIGH, sharedPrefs.getString(
+				DeviceSettings.KEY_SET_HIGH_CLOCK, "480000"));
+
+		Utils.writeValue(FILE_BOOST_LOW, sharedPrefs.getString(
+				DeviceSettings.KEY_SET_LOW_CLOCK, "399260"));
 
 		// TCP Control Restore
 		try {

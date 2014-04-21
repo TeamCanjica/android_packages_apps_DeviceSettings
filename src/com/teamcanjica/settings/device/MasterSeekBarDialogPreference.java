@@ -362,7 +362,7 @@ public class MasterSeekBarDialogPreference extends DialogPreference implements O
 		
 		// ABBamp Audio - LPA Mode Control
 		else if (key.equals(DeviceSettings.KEY_LPA_MODE_CONTROL)) {
-			Utils.writeValue(AudioFragmentActivity.FILE_LPA_MODE, "vape=0x" + String.valueOf((Integer) newValue));
+			Utils.writeValue(AudioFragmentActivity.FILE_LPA_MODE, "vape=0x" + Integer.toHexString((Integer) newValue));
 		}
 
 		return true;

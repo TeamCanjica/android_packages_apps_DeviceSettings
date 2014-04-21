@@ -29,6 +29,8 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 	private static final String FILE_S2WTHRESH_CODINA = "/sys/kernel/bt404/sweep2wake";
 	private static final String FILE_S2WTHRESH_JANICE = "/sys/kernel/mxt224e/sweep2wake";
 	private static final String FILE_BOOST_DELAY = "/sys/kernel/mali/mali_boost_delay";
+	private static final String FILE_BOOST_HIGH = "/sys/kernel/mali/mali_boost_high";
+	private static final String FILE_BOOST_LOW = "/sys/kernel/mali/mali_boost_low";
 	
 	public MasterEditTextPreference(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -41,19 +43,17 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 		String key = preference.getKey();
 		
 		if (key.equals(DeviceSettings.KEY_X_SWEEP2WAKE)) {
-			if (Utils.isCodina()) {
-				Utils.writeValue(FILE_S2WTHRESH_CODINA, "threshold_x=" + newValue);
-			} else if (Utils.isJanice()) {
-				Utils.writeValue(FILE_S2WTHRESH_JANICE, "threshold_x=" + newValue);
-			}
+			Utils.writeValue((Utils.isCodina() ?
+					FILE_S2WTHRESH_CODINA : FILE_S2WTHRESH_JANICE), "threshold_x=" + newValue);
 		} else if (key.equals(DeviceSettings.KEY_Y_SWEEP2WAKE)) {
-			if (Utils.isCodina()) {
-				Utils.writeValue(FILE_S2WTHRESH_CODINA, "threshold_y=" + newValue);
-			} else if (Utils.isJanice()){
-				Utils.writeValue(FILE_S2WTHRESH_JANICE, "threshold_y=" + newValue);
-			}
+			Utils.writeValue((Utils.isCodina() ?
+					FILE_S2WTHRESH_CODINA : FILE_S2WTHRESH_JANICE), "threshold_y=" + newValue);
 		} else if (key.equals(DeviceSettings.KEY_BOOST_DELAY)) {
 			Utils.writeValue(FILE_BOOST_DELAY, (String) newValue);
+		} else if (key.equals(DeviceSettings.KEY_BOOST_HIGHTHRESH)) {
+			Utils.writeValue(FILE_BOOST_HIGH, "threshold=" + (String) newValue);
+		} else if (key.equals(DeviceSettings.KEY_BOOST_LOWTHRESH)) {
+			Utils.writeValue(FILE_BOOST_LOW, "threshold=" + (String) newValue);
 		}
 
 		return true;
@@ -64,6 +64,7 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(context);
 
+		// Sweep2wake x and y threshold
 		if (Utils.isCodina()) {
 		Utils.writeValue(FILE_S2WTHRESH_CODINA, "threshold_x=" + sharedPrefs.getString(
 				DeviceSettings.KEY_X_SWEEP2WAKE, "120"));
@@ -78,8 +79,17 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 					DeviceSettings.KEY_Y_SWEEP2WAKE, "240"));
 		}
 
+		// Mali boost delay
 		Utils.writeValue(FILE_BOOST_DELAY, sharedPrefs.getString(
 				DeviceSettings.KEY_BOOST_DELAY, "500"));
+
+		// Mali boost high threshold
+		Utils.writeValue(FILE_BOOST_HIGH, "threshold=" + sharedPrefs.getString(
+				DeviceSettings.KEY_BOOST_HIGHTHRESH, "233"));
+
+		// Mali boost low threshold
+		Utils.writeValue(FILE_BOOST_LOW, "threshold=" + sharedPrefs.getString(
+				DeviceSettings.KEY_BOOST_LOWTHRESH, "64"));
 	}
 
 }
