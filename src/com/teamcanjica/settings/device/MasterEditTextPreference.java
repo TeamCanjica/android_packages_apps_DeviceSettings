@@ -57,6 +57,7 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 			Utils.writeValue(FILE_BOOST_HIGH, "threshold=" + (String) newValue);
 		} else if (key.equals(DeviceSettings.KEY_BOOST_LOWTHRESH)) {
 			Utils.writeValue(FILE_BOOST_LOW, "threshold=" + (String) newValue);
+		}
 
 		return true;
 	}
