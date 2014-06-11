@@ -38,7 +38,6 @@ public class AdvancedFragmentActivity extends PreferenceFragment {
 
 	private static final String FILE_ACCELEROMETER_CALIB = "/sys/class/sensors/accelerometer_sensor/calibration";
 	private static final String FILE_BLN = "/sys/class/misc/backlightnotification/enabled";
-	private static final String FILE_BLN_BLINK = "/sys/kernel/bln/blink_mode";
 	private static final String FILE_BURNING_LED = "/sys/class/camera/flash/burning_led";
 	private static final String FILE_VOLTAGE1 = "/sys/kernel/liveopp/arm_step3";
 	private static final String FILE_VOLTAGE2 = "/sys/kernel/liveopp/arm_step4";
@@ -94,15 +93,6 @@ public class AdvancedFragmentActivity extends PreferenceFragment {
 		} else if (key.equals(DeviceSettings.KEY_DISABLE_BLN)) {
 			Utils.writeValue(FILE_BLN, !((CheckBoxPreference) preference)
 					.isChecked());
-			getPreferenceScreen().findPreference(DeviceSettings.KEY_DISABLE_BLN_BLINK).setEnabled(
-					!((CheckBoxPreference) preference).isChecked());
-			getPreferenceScreen().findPreference(DeviceSettings.KEY_BLN_DELAY).setEnabled(
-					!((CheckBoxPreference) preference).isChecked());
-		} else if (key.equals(DeviceSettings.KEY_DISABLE_BLN_BLINK)) {
-			Utils.writeValue(FILE_BLN_BLINK, (((CheckBoxPreference) preference)
-					.isChecked() ? "off" : "on"));
-			getPreferenceScreen().findPreference(DeviceSettings.KEY_BLN_DELAY).setEnabled(
-					!((CheckBoxPreference) preference).isChecked());
 		} else if (key.equals(DeviceSettings.KEY_BURNING_LED)) {
 			Utils.writeValue(FILE_BURNING_LED, ((CheckBoxPreference) preference)
 					.isChecked());
@@ -130,9 +120,6 @@ public class AdvancedFragmentActivity extends PreferenceFragment {
 
 		Utils.writeValue(FILE_BLN, sharedPrefs.getBoolean(
 				DeviceSettings.KEY_DISABLE_BLN, false) ? "0" : "1");
-
-		Utils.writeValue(FILE_BLN_BLINK, sharedPrefs.getBoolean(
-				DeviceSettings.KEY_DISABLE_BLN_BLINK, false) ? "off" : "on");
 
 		boolean accelerometerCalib = sharedPrefs.getBoolean(
 				DeviceSettings.KEY_USE_ACCELEROMETER_CALIBRATION, true);

@@ -32,7 +32,6 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 	private static final String FILE_BOOST_DELAY = "/sys/kernel/mali/mali_boost_delay";
 	private static final String FILE_BOOST_HIGH = "/sys/kernel/mali/mali_boost_high";
 	private static final String FILE_BOOST_LOW = "/sys/kernel/mali/mali_boost_low";
-	private static final String FILE_BLN_DELAY = "/sys/kernel/bln/blink_mode";
 	
 	public MasterEditTextPreference(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -58,9 +57,6 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 			Utils.writeValue(FILE_BOOST_HIGH, "threshold=" + (String) newValue);
 		} else if (key.equals(DeviceSettings.KEY_BOOST_LOWTHRESH)) {
 			Utils.writeValue(FILE_BOOST_LOW, "threshold=" + (String) newValue);
-		} else if (key.equals(DeviceSettings.KEY_BLN_DELAY)) {
-			Utils.writeValue(FILE_BLN_DELAY, "delay=" + (String) newValue);
-		}
 
 		return true;
 	}
@@ -100,10 +96,6 @@ public class MasterEditTextPreference extends EditTextPreference implements OnPr
 		// Mali boost low threshold
 		Utils.writeValue(FILE_BOOST_LOW, "threshold=" + sharedPrefs.getString(
 				DeviceSettings.KEY_BOOST_LOWTHRESH, "64"));
-
-		// BLN Delay
-		Utils.writeValue(FILE_BLN_DELAY, "delay=" + sharedPrefs.getString(
-				DeviceSettings.KEY_BLN_DELAY, "1000"));
 
 	}
 

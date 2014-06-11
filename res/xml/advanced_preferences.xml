@@ -15,17 +15,6 @@
             android:key="disable_bln"
             android:summary="@string/disable_bln_summary_head"
             android:title="@string/disable_bln_title_head" />
-        <CheckBoxPreference
-            android:key="disable_bln_blink"
-            android:summary="@string/disable_bln_blink_summary_head"
-            android:title="@string/disable_bln_blink_title_head" />
-        <com.teamcanjica.settings.device.MasterEditTextPreference
-            android:key="bln_delay"
-            android:summary="@string/bln_delay_summary_head"
-            android:title="@string/bln_delay_title_head"
-            android:digits="0123456789"
-            android:inputType="number"
-            android:defaultValue="1000" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/torch_subcat_title" >

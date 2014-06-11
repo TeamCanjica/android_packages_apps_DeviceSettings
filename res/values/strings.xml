@@ -284,10 +284,6 @@
     <string name="backlight_subcat_title">Backlight</string>
     <string name="disable_bln_title_head">Disable BLN</string>
     <string name="disable_bln_summary_head">You won\'t be able to be notified of notifications through your backlight if BLN is disabled.</string>
-    <string name="disable_bln_blink_title_head">Disable BLN blink</string>
-    <string name="disable_bln_blink_summary_head">Disables BLN blinking.</string>
-    <string name="bln_delay_title_head">BLN blinking delay</string>
-    <string name="bln_delay_summary_head">Configure BLN blinking frequency in ms.</string>
 
     <!-- SUBCATEGORY: Torch-->
     <string name="torch_subcat_title">Torch</string>
