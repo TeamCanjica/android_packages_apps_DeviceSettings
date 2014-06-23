@@ -439,9 +439,8 @@ public class MasterSeekBarDialogPreference extends DialogPreference implements O
 		Utils.writeValue(FILE_MIN_BRIGHTNESS,
 				String.valueOf(sharedPrefs
 						.getInt(DeviceSettings.KEY_MIN_BRIGHTNESS, 1)));
-
+		int i,j;
 		/* CPU Voltage
-		int i;
 		double currentCPUVolt = Math.round(sharedPrefs.
 				getInt(DeviceSettings.KEY_CPU_VOLTAGE, 0) / 12.5) * 12.5;
 		for (i = 0; voltSteps[i] != Math.abs(currentCPUVolt); i++) {
@@ -449,7 +448,7 @@ public class MasterSeekBarDialogPreference extends DialogPreference implements O
 		if (currentCPUVolt < 0) {
 			i *= -1;
 		}
-		for (int j = 0; j <= defaultCPUVoltValues.length - 1; j++) {
+		for (j = 0; j <= defaultCPUVoltValues.length - 1; j++) {
 		    Utils.writeValue(FILE_CPU_VOLTAGE + String.valueOf(j), 
 		    		"varm=0x" + Integer.toHexString(defaultCPUVoltValues[j] + i));
 		} */
@@ -459,7 +458,7 @@ public class MasterSeekBarDialogPreference extends DialogPreference implements O
 				getInt(DeviceSettings.KEY_GPU_VOLTAGE, 0) / 12.5) * 12.5;
 		for (i = 0; voltSteps[i] != Math.abs(currentGPUVolt); i++) {
 		}
-		for (int j = 0; j <= defaultGPUVoltValues.length - 1; j++) {
+		for (j = 0; j <= defaultGPUVoltValues.length - 1; j++) {
 		    Utils.writeValue(FILE_GPU_VOLTAGE, 
 		    		j + " vape=0x" + Integer.toHexString(defaultGPUVoltValues[j] - i));
 		}
